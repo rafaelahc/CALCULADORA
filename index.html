@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+
+    <!-- FONT AEWSOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        
+        <div class="toggle">
+            <input type="checkbox" id="checkbox" class="checkbox">
+            <label class="label" for="checkbox">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+                <span class="ball"></span>
+            </label>   
+        </div>
+
+        <div class="calculator-container">
+            <div class="calculator-box">
+                <div class="calculator-container-visor">
+                    <input type="text" id="visor-result" readonly class="visor-result">
+                </div>
+                <div class="calculator-visor-buttons">
+                    <div class="row first-row">
+                        <button onclick="clearBtn()" class="btn btn-clear">C</button>
+                        <button onclick="percentBtn()" class="btn btn-percent">%</button>
+                        <button onclick="operatorMath('÷')" class="btn btn-obelus">÷</button>
+                    </div>
+                    <div class="row second-row">
+                        <button onclick="insertNumber(7)" class="btn btn-7">7</button>
+                        <button onclick="insertNumber(8)"class="btn btn-8">8</button>
+                        <button onclick="insertNumber(9)"class="btn btn-9">9</button>
+                        <button onclick="operatorMath('x')"class="btn btn-multi">x</button>
+                    </div>
+                    <div class="row third-row">
+                        <button onclick="insertNumber(4)" class="btn btn-4">4</button>
+                        <button onclick="insertNumber(5)" class="btn btn-5">5</button>
+                        <button onclick="insertNumber(6)" class="btn btn-6">6</button>
+                        <button onclick="operatorMath('-')" class="btn btn-less">-</button>
+                    </div>
+                    <div class="row fourth-row">
+                        <button onclick="insertNumber(1)" class="btn btn-1">1</button>
+                        <button onclick="insertNumber(2)" class="btn btn-2">2</button>
+                        <button onclick="insertNumber(3)" class="btn btn-3">3</button>
+                        <button onclick="operatorMath('+')" class="btn btn-plus">+</button>
+                    </div>
+                    <div class="row last-row">
+                        <button onclick="insertNumber(0)" class="btn btn-0">0</button>
+                        <button onclick="insertPoint()" class="btn btn-decimal">.</button>
+                        <button onclick="resultBtn()" class="btn btn-equal">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="js/index.js"></script>
+</html>

@@ -1,0 +1,140 @@
+@use 'variables'
+
+*   
+    margin: 0
+    padding: 0
+    font-family: 'Barlow', sans-serif
+    font-size: 16px
+    font-weight: bold
+    box-sizing: border-box
+    transition: .5s
+
+body
+    background-color: variables.$secundary-color
+
+body.dark
+    background-color: variables.$black-dark
+
+    .calculator-box
+        border: 1px solid variables.$bg-color-dark
+        background-color: variables.$bg-color-dark
+
+        .calculator-visor-buttons
+            .row
+                .btn
+                    background-color: variables.$primary-color
+                    color: variables.$bg-color-dark
+                
+                
+                .btn-obelus, .btn-multi, .btn-plus, .btn-less   
+                    background-color: variables.$button-dark
+                    color: variables.$bg-color-dark
+
+                .btn-equal
+                    background-color: #e5f77d
+                    
+
+    
+   
+.toggle
+    display: flex
+    justify-content: end
+    margin-top: 10px
+    margin-right: 10px
+
+    .checkbox:checked + .label .ball
+        transform: translateX(24px)
+
+    .checkbox
+        opacity: 0
+        position: absolute
+
+    .label
+        background-color: #111
+        border-radius: 50px
+        cursor: pointer
+        display: flex
+        justify-content: space-between
+        align-content: center
+        width: 50px
+        height: 26px
+        padding: 5px
+        position: relative
+
+
+        .ball
+            background-color: variables.$primary-color
+            border-radius: 50%
+            position: absolute
+            top: 2px
+            left: 2px
+            height: 22px
+            width: 22px
+            transform: translateX(0px)
+            transition: transform 0.2s linear   
+
+        .fa-moon
+            color: variables.$primary-color
+        
+        .fa-sun
+            color: variables.$primary-color
+
+.calculator-container
+    position: relative
+    width: 100%
+    height: 100vh
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+    .calculator-box
+        position: absolute
+        width: 340px
+        border: 1px solid variables.$bg-color
+        background-color: variables.$bg-color
+    
+        .calculator-container-visor
+            display: flex
+            justify-content: center
+
+            input
+                width: 90%
+                height: 65px
+                margin: 15px auto
+                text-align: right
+                outline: none
+                font-size: 25px
+                padding-right: 5px
+                
+        
+        .calculator-visor-buttons
+                width: 100%
+
+                .row
+                    width: 90%
+                    display: flex
+                    justify-content: space-between
+                    margin: 15px
+                    
+                    .btn
+                        width: 65px
+                        height: 65px
+                        border: none    
+                        border-radius: 50%
+                        background: variables.$primary-color
+                        color: #000
+                        cursor: pointer
+
+                        &:hover
+                            background: #CCB69B
+                                           
+                    .btn-0, .btn-clear
+                        width: 50%
+                        border-radius: 55px
+
+                    .btn-obelus, .btn-multi, .btn-plus, .btn-less
+                        background-color: variables.$secundary-color
+
+                    .btn-equal
+                        background-color: #e5f77d
